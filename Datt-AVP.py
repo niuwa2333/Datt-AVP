@@ -138,3 +138,31 @@ model.to(device)
 criterion = nn.CrossEntropyLoss()
 # Adam
 optimizer = optim.Adam(model.parameters(), lr=lr,weight_decay=L2)
+
+##train
+epochs = 122
+for epoch in range(epochs):
+    
+    model.train()
+
+    outputs = model(train_features)
+
+    loss = criterion(outputs, train_labels)
+
+    loss.backward()
+
+    optimizer.step()
+
+    optimizer.zero_grad()
+    train_preds = torch.argmax(outputs, dim=1)
+    train_acc = torch.sum(train_preds == train_labels).item() / len(train_labels)
+    model.eval()
+    val_loss = criterion(val_outputs, test_labels).item()
+    val_preds = torch.argmax(val_outputs, dim=1)
+    val_acc = torch.sum(val_preds == test_labels).item() / len(test_labels)\
+##eval on test set
+model.eval()
+outputs = model(test_set)
+loss = criterion(outputs, test_lab)
+test_loss = criterion(outputs, test_lab).item()
+preds = torch.argmax(outputs, dim=1)
