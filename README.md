@@ -1,4 +1,4 @@
-# 🧬 AVPs Prediction using Deep Learning 🧬
+# 🧬 AVPs Prediction using Deep Learning 🧬 [IEEE TCBB]
 ## Project Overview
 Welcome to our project where we harness the power of Deep Learning and Pre-trained Protein Language Models to predict potential Anti viral peptides(AVPs). By analyzing protein sequences, our model identifies proteins that may act as virulence factors, which is crucial for biomedical research and drug development.
 
