@@ -19,12 +19,12 @@ git clone https://github.com/niuwa2333/DTVF.git
 
 ### Navigate to the Project Directory:
 ``` bash
-cd DTVF
+
 ```
 
 ### Run the UI Script:
 ``` bash
-python run.py 
+
 ```
 
 ## Data
